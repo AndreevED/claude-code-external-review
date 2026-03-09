@@ -13,6 +13,7 @@ desktop.ini
 
 # Claude Code
 .claude/
+CLAUDE.md
 
 # Git
 *.orig
