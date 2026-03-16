@@ -118,7 +118,8 @@ RULES_CONTEXT
 ```bash
 RESULT=$(codex exec \
   -s read-only \
-  --dangerously-bypass-approvals-and-sandbox \
+  -c model_reasoning_effort=xhigh \
+  -c stream_idle_timeout_ms=1800000 \
   - < ".codex-plan-review/prompt-iter<N>.txt" \
   2>".codex-plan-review/run.log") \
   || (echo "codex failed:"; cat ".codex-plan-review/run.log")
